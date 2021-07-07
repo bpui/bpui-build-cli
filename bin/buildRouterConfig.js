@@ -7,23 +7,13 @@ var chalk = require('chalk');
 function done(args, options, workDir) {
   workDir = workDir || process.cwd();
 
-  require('./buildRouterConfig');
-  
   console.log('');
   console.log('**************************************************************');
-  console.log('> Will build project: production');
+  console.log('> Will build project router config');
   console.log('**************************************************************');
   console.log('');
 
-  febs.utils.execCommand('./node_modules/.bin/vue-cli-service', ['build'], { cwd: workDir }, (err, stdout, stderr) => {
-    if (!err) {
-      if (stdout) console.log(stdout);
-    }
-    else {
-      if (stdout) console.log(stdout);
-      if (stderr) console.error(chalk.red(stderr));
-    }
-  });
+  require(path.join(__dirname, '../_scripts/buildRouterConfig'));
 }
 
 

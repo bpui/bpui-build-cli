@@ -1,9 +1,13 @@
 'use strict';
 
 var febs = require('febs');
+var path = require('path');
+var chalk = require('chalk');
 
 function done(args, options, workDir) {
   workDir = workDir || process.cwd();
+
+  require('./buildRouterConfig');
 
   console.log('');
   console.log('**************************************************************');
@@ -11,13 +15,13 @@ function done(args, options, workDir) {
   console.log('**************************************************************');
   console.log('');
 
-  require('../scripts/buildRouterConfig');
   febs.utils.execCommand('./node_modules/.bin/vue-cli-service', ['build', '--mode', 'development'], { cwd: workDir }, (err, stdout, stderr) => {
     if (!err) {
-      console.log(stdout);
+      if (stdout) console.log(stdout);
     }
     else {
-      console.error(stderr);
+      if (stdout) console.log(stdout);
+      if (stderr) console.error(chalk.red(stderr));
     }
   });
 }

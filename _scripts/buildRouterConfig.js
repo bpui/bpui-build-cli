@@ -11,8 +11,7 @@ var path = require('path')
 var febs = require('febs')
 var fs = require('fs')
 
-const PATH = path.join(__dirname, '..', 'src', 'pages')
-
+const PATH = path.join(process.cwd(), 'src', 'pages')
 
 let pages = febs.file.dirExplorerFilesRecursive(PATH, /.*\.(vue|VUE)/)
 let routerConfig = `/* eslint-disable */
@@ -53,7 +52,7 @@ Promise.all(arrFn).then(res => {
 
   try {
     fs.writeFileSync(
-      path.join(__dirname, '..', 'src', 'router', '_tmpConfig.ts'),
+      path.join(process.cwd(), 'src', 'router', '_tmpConfig.ts'),
       routerConfig,
       'utf8'
     )

@@ -7,11 +7,13 @@ var path = require('path');
 var build = require('./build');
 var buildDev = require('./buildDev');
 var debug = require('./debug');
+var buildRouterConfig = require('./buildRouterConfig');
 
 var commands = {
   'build': [build, 'Build project for production.'],
   'build:dev': [buildDev, 'Build project for development.'],
   'debug': [debug, 'Debug project.'],
+  'router': [buildRouterConfig, 'Build router config file.'],
 }
 
 /**
