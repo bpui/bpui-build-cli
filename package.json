@@ -1,0 +1,49 @@
+{
+  "description": "build cli of bpui",
+  "dependencies": {
+    "@types/assert": "^1.4.2",
+    "@types/jquery": "^3.3.29",
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-plugin-pwa": "~4.3.0",
+    "@vue/cli-plugin-typescript": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "css-loader": "^3.0.0",
+    "febs": "^1.2.9",
+    "gulp": "^4.0.2",
+    "node-sass": "^4.12.0",
+    "regenerator-runtime": "^0.13.5",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^0.23.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "typescript": "^3.4.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "directories": {},
+  "engines": {
+    "node": ">=10"
+  },
+  "homepage": "https://github.com/bpui/bpui-build-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bpui/bpui-build-cli.git"
+  },
+  "keywords": [],
+  "files": [
+    "_scripts",
+    "bin"
+  ],
+  "bin": {
+    "bpui-build": "./bin/index.js"
+  },
+  "license": "MIT",
+  "main": "./bin/index.js",
+  "maintainers": [
+    {
+      "name": "brainpoint",
+      "email": "bpoint.lee@gmail.com"
+    }
+  ],
+  "name": "@bpui/build-cli",
+  "version": "0.0.1"
+}
