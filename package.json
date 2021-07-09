@@ -17,6 +17,7 @@
     "stylus-loader": "^3.0.2",
     "term-list": "^0.2.1",
     "typescript": "^3.4.3",
+    "tslib": "^1.14.1",
     "vue-template-compiler": "^2.6.11"
   },
   "directories": {},
@@ -45,5 +46,5 @@
     }
   ],
   "name": "@bpui/build-cli",
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
