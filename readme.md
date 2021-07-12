@@ -1,3 +1,3 @@
 ```bash
-bpui-build router [layout]                   # Build router config file.
+bpui-build router [layout=layoutName]        # Build router config file.     
 ```

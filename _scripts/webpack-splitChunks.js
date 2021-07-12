@@ -1,7 +1,7 @@
 'use strict';
 
 /**
-* Copyright (c) 2021 Originforest Co.,Ltd. All Rights Reserved.
+* Copyright (c) 2021 bp. All Rights Reserved.
 * Author: brian.li
 * Date: 2021-07-12 10:10
 * Desc: 

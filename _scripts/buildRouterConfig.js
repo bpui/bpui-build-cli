@@ -36,6 +36,18 @@ export default [\r
     if (values.indexOf('components') > 0) {
       return
     }
+
+    if (layout && !(url.indexOf(layout + '/') == 0 || url == layout)) {
+      return;
+    }
+
+    if (url.indexOf('default/') == 0) {
+      url = url.substring('default/'.length);
+    }
+    else if (url == 'default') {
+      url = '';
+    }
+
     let componentName = null;
     var data = febs.utils.denodeify(fs.readFile, fs)(PATH + `/${value}`, "utf-8");
     arrFn.push(data);
@@ -53,7 +65,7 @@ export default [\r
   })
 
   Promise.all(arrFn).then(res => {
-    routerConfig += `{path:'*', component: () => import('../pages/404.vue')},\r`
+    routerConfig += `{path:'*', component: () => import('../pages/default/404.vue')},\r`
     routerConfig += `]
 /* eslint-enable */
 `
