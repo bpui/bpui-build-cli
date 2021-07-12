@@ -4,13 +4,9 @@
 
 var List = require('term-list');
 var path = require('path');
-var build = require('./build');
-var debug = require('./debug');
 var buildRouterConfig = require('./buildRouterConfig');
 
 var commands = {
-  'build': [build, 'Build project.'],
-  'debug': [debug, 'Debug project.'],
   'router': [buildRouterConfig, 'Build router config file.'],
 }
 

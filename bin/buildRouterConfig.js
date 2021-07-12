@@ -7,13 +7,13 @@ var chalk = require('chalk');
 function done(args, options, workDir) {
   workDir = workDir || process.cwd();
 
-  console.log('');
-  console.log('**************************************************************');
-  console.log('> Will build project router config');
-  console.log('**************************************************************');
-  console.log('');
+  var layout;
+  if (options[0] && options[0].indexOf('--') < 0) {
+    layout = options[0];
+    options = options.slice(1);
+  }
 
-  require(path.join(__dirname, '../_scripts/buildRouterConfig'));
+  require(path.join(__dirname, '../_scripts/buildRouterConfig')).run(layout);
 }
 
 
