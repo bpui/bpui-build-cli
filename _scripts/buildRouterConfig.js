@@ -65,7 +65,7 @@ export default [\r
   })
 
   Promise.all(arrFn).then(res => {
-    routerConfig += `{path:'*', component: () => import('../pages/default/404.vue')},\r`
+    // routerConfig += `{path:'*', component: () => import('../pages/default/404.vue')},\r`
     routerConfig += `]
 /* eslint-enable */
 `
