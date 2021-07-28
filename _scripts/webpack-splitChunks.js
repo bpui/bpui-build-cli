@@ -97,6 +97,20 @@ module.exports = function (cfg/*: { maxSize, minSize }*/) {
         enforce: true,
         test: /([\\/]node_modules[\\/]((\@bpui\/switch))[\\/])/
       },
+      bpui_uploader: {
+        name: "vendor/bpui-uploader",
+        priority: 20,
+        reuseExistingChunk: false,
+        enforce: true,
+        test: /([\\/]node_modules[\\/]((\@bpui\/uploader))[\\/])/
+      },
+      bpui_select: {
+        name: "vendor/bpui-select",
+        priority: 20,
+        reuseExistingChunk: false,
+        enforce: true,
+        test: /([\\/]node_modules[\\/]((\@bpui\/select))[\\/])/
+      },
       // 处理入口chunk
       febs: {
         name: "vendor/febs",
