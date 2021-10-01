@@ -20,6 +20,13 @@ module.exports = function (cfg/*: { maxSize, minSize }*/) {
     maxSize: maxSize,
     minSize: minSize,
     cacheGroups: {
+      ui: {
+        name: "vendor-ui",
+        priority: 20,
+        reuseExistingChunk: false,
+        enforce: true,
+        test: /([\\/]node_modules[\\/]((\@bpui\/ui))[\\/])/
+      },
       bpui: {
         name: "vendor-bpui",
         priority: 20,
@@ -90,6 +97,13 @@ module.exports = function (cfg/*: { maxSize, minSize }*/) {
         enforce: true,
         test: /([\\/]node_modules[\\/]((\@bpui\/radio))[\\/])/
       },
+      bpui_select: {
+        name: "vendor-bpui-select",
+        priority: 20,
+        reuseExistingChunk: false,
+        enforce: true,
+        test: /([\\/]node_modules[\\/]((\@bpui\/select))[\\/])/
+      },
       bpui_switch: {
         name: "vendor-bpui-switch",
         priority: 20,
@@ -97,19 +111,26 @@ module.exports = function (cfg/*: { maxSize, minSize }*/) {
         enforce: true,
         test: /([\\/]node_modules[\\/]((\@bpui\/switch))[\\/])/
       },
+      bpui_tabbar: {
+        name: "vendor-bpui-tabbar",
+        priority: 20,
+        reuseExistingChunk: false,
+        enforce: true,
+        test: /([\\/]node_modules[\\/]((\@bpui\/tabbar))[\\/])/
+      },
+      bpui_tableview: {
+        name: "vendor-bpui-tableview",
+        priority: 20,
+        reuseExistingChunk: false,
+        enforce: true,
+        test: /([\\/]node_modules[\\/]((\@bpui\/table-view))[\\/])/
+      },
       bpui_uploader: {
         name: "vendor-bpui-uploader",
         priority: 20,
         reuseExistingChunk: false,
         enforce: true,
         test: /([\\/]node_modules[\\/]((\@bpui\/uploader))[\\/])/
-      },
-      bpui_select: {
-        name: "vendor-bpui-select",
-        priority: 20,
-        reuseExistingChunk: false,
-        enforce: true,
-        test: /([\\/]node_modules[\\/]((\@bpui\/select))[\\/])/
       },
       // 处理入口chunk
       febs: {
