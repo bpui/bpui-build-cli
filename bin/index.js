@@ -5,9 +5,11 @@
 var List = require('term-list');
 var path = require('path');
 var buildRouterConfig = require('./buildRouterConfig');
+var buildRouterConfig2 = require('./buildRouterConfig2');
 
 var commands = {
-  'router': [buildRouterConfig, 'Build router config file.'],
+  'router': [buildRouterConfig, 'Build router config file in [layouts, pages].'],
+  'router2': [buildRouterConfig2, 'Build router config file in [layouts].'],
 }
 
 /**
