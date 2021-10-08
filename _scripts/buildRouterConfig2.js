@@ -63,19 +63,7 @@ export default [\r
     }
 
     let componentName = null;
-    var data = febs.utils.denodeify(fs.readFile, fs)(PATH + `/${value}`, "utf-8");
-    arrFn.push(data);
-    data.then(res => {
-      var str = res.toString();
-      var arr = str.match(/<breadName>([\s\S]*?)<\/breadName>/);
-      if (arr) componentName = JSON.stringify(arr[1]);
-      if (url == 'index') url = ''
-      routerConfig += `{path:'/${url}',name:${componentName}, component: () => import('../pages/${value}')},\r`
-    }
-    ).catch(err => {
-      console.log(err)
-    })
-
+    routerConfig += `{path:'/${url}',name:${componentName}, component: () => import('../pages/${value}')},\r`
   })
 
   Promise.all(arrFn).then(res => {
