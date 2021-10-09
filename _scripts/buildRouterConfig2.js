@@ -79,6 +79,7 @@ export default {
     layoutConfig += `};`;
     
     try {
+      febs.file.dirAssure(path.join(process.cwd(), 'src', 'router'));
       fs.writeFileSync(
         path.join(process.cwd(), 'src', 'router', '_tmpConfig.ts'),
         routerConfig,
