@@ -55,6 +55,10 @@ export default [\r
       return;
     }
 
+    if (values[values.length - 1][0] == '_') {
+      return;
+    }
+
     if (url.indexOf('default/') == 0) {
       url = url.substring('default/'.length);
     }
